@@ -27,6 +27,12 @@ public class Player : MonoBehaviour
         {
             anim.SetBool("isRunning", false);
         }
+
+        if (input > 0)
+            transform.eulerAngles = new Vector3(0, 0, 0);
+        else if (input < 0)
+            transform.eulerAngles = new Vector3(0, 180, 0);
+
     }
 
     // Update is called once per frame
